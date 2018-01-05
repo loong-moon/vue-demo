@@ -1,0 +1,98 @@
+@charset "UTF-8";
+/*所有sass变量及函数*/
+
+/*颜色*/
+$primary:#00bf59;
+$bodyBg:#f0f4f6;
+$grayBg:#f7f9fa;
+$light:#e4e4e4;
+$gray: #999;
+$darkGray: #666;
+$black: #333;
+$lightBlue:#8f9ea4;
+$orange:#ffb108;
+$red:#f41b0e;
+$green:#00bf59;
+$blue:#51dcff;
+$purple:#b69ff9;
+$lineColor:#f2f2f2;
+$borderColor:#d7dadc;
+
+/*层级*/
+$z-layers: (
+    "default":1,
+    "below":-1,
+    "top":9999,
+    "bottom":-9999,
+    "modal": (
+        "base":500,
+        "close":100,
+        "header":50,
+        "footer":10
+    )
+);
+
+@function map-has-nested-keys($map, $keys...) {
+  @each $key in $keys {
+    @if not map-has-key($map, $key) {
+      @return false;
+    }
+    $map: map-get($map, $key);
+  }
+
+  @return true;
+}
+@function map-deep-get($map, $keys...) {
+  @each $key in $keys {
+    $map: map-get($map, $key);
+  }
+
+  @return $map;
+}
+//用法：z-index: z("modal", "base"); z-index: z("default");
+@function z($layers...) {
+  @if not map-has-nested-keys($z-layers, $layers...) {
+    @warn "No layer found for `#{inspect($layers...)}` in $z-layers map. Property omitted.";
+  }
+
+  @return map-deep-get($z-layers, $layers...);
+}
+
+/*mixin*/
+@mixin center() {
+  position:absolute; top:50%; left: 50%; transform: translate(-50%, -50%);
+}
+@mixin clamp($lineClamp: 2) {
+  overflow : hidden;  text-overflow: ellipsis;  display: -webkit-box;  -webkit-line-clamp:$lineClamp;  -webkit-box-orient: vertical;
+}
+@mixin cover() {
+  position:absolute; top:0; left:0; bottom: 0; right: 0;
+}
+%cover { @include cover; }
+// 三角形
+@mixin triangle($direction, $size, $borderColor ) {
+  content:""; height: 0; width: 0;
+  @if $direction == top {
+    border-bottom:$size solid $borderColor; border-left:$size dashed transparent; border-right:$size dashed transparent;
+  }
+  @else if $direction == right {
+    border-left:$size solid $borderColor; border-top:$size dashed transparent; border-bottom:$size dashed transparent;
+  }
+  @else if $direction == bottom {
+    border-top:$size solid $borderColor; border-left:$size dashed transparent; border-right:$size dashed transparent;
+  }
+  @else if $direction == left {
+    border-right:$size solid $borderColor; border-top:$size dashed transparent; border-bottom:$size dashed transparent;
+  }
+}
+// 清楚浮动
+$legacy-support-for-ie:true;
+@mixin clearfix {
+  @if $legacy-support-for-ie {
+    *zoom: 1;
+  }
+  &:before, &:after { content: ""; display: table; }
+  &:after { clear: both; overflow: hidden; }
+}
+%clearfix { @include clearfix; }
+
