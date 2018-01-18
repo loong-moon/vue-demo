@@ -1,6 +1,6 @@
 <template>
   <div class="player">
-    <video id="my-video" ref="video" class="video-js" width="300" height="150">
+    <video id="my-video" ref="video" class="video-js" width="600" height="300">
       <source src="http://localhost:8090/dahai/index.mpd" type='application/dash+xml'>
       <p class="vjs-no-js">
         观看视频请启用JavaScript，并且把浏览器升级到

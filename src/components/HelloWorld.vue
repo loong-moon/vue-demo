@@ -3,6 +3,12 @@
     <h1>Welcome to Your Vue.js App:{{ appName }}</h1>
     <Button type="primary" @click="changeAppName('我的应用')">Primary</Button>
 
+    <div style="padding: 10px;">
+      <router-link to="/player">视频播放</router-link>
+      <router-link to="/dash">DASH播放</router-link>
+      <router-link to="/hls">HlS播放</router-link>
+    </div>
+
     <svg class="icon" style="color:red;" aria-hidden="true">
       <use xlink:href="#icon-xiangzuo"></use>
     </svg>
@@ -29,7 +35,7 @@
         .then(function () {
           // DOM 更新了
         })
-      this.getTokens()
+//      this.getTokens()
       this.testFunc('aaa')
     },
     methods: {

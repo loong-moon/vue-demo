@@ -1,6 +1,6 @@
 <template>
   <div class="player">
-    <video id="my-video" ref="video" class="video-js" width="300" height="150">
+    <video id="my-video" ref="video" class="video-js" width="600" height="300">
       <!--<source src="http://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8" type="application/x-mpegURL">-->
       <p class="vjs-no-js">
         观看视频请启用JavaScript，并且把浏览器升级到

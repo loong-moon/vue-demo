@@ -2,7 +2,9 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 import HelloWorld from '@/components/HelloWorld'
-import Video from '@/components/Video'
+import Player from '@/components/Player'
+import DashPlayer from '@/components/DashPlayer'
+import HlsPlayer from '@/components/HlsPlayer'
 
 Vue.use(Router)
 
@@ -14,9 +16,19 @@ export default new Router({
       component: HelloWorld
     },
     {
-      path: '/video',
-      name: 'Video',
-      component: Video
+      path: '/player',
+      name: 'Player',
+      component: Player
+    },
+    {
+      path: '/dash',
+      name: 'Dash',
+      component: DashPlayer
+    },
+    {
+      path: '/hls',
+      name: 'Hls',
+      component: HlsPlayer
     }
   ]
 })
