@@ -43,10 +43,10 @@
         'changeAppName'
       ]),
       sysFunc (v1, v2) {
-        console.log(v1, v2)
+        // console.log(v1, v2)
       },
       testFunc (str) {
-        console.log(str)
+        // console.log(str)
         this.sysFunc(str)
       },
       getTokens () {
