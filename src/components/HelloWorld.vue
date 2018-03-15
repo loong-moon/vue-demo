@@ -35,6 +35,7 @@
         .then(function () {
           // DOM 更新了
         })
+      // console.log(this, this.$http)
 //      this.getTokens()
       this.testFunc('aaa')
     },
