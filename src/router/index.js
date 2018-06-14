@@ -5,6 +5,7 @@ import HelloWorld from '@/components/HelloWorld'
 import Player from '@/components/Player'
 import DashPlayer from '@/components/DashPlayer'
 import HlsPlayer from '@/components/HlsPlayer'
+import PlyrPlayer from '@/components/PlyrPlayer'
 
 Vue.use(Router)
 
@@ -29,6 +30,11 @@ export default new Router({
       path: '/hls',
       name: 'Hls',
       component: HlsPlayer
+    },
+    {
+      path: '/plyr',
+      name: 'plyr',
+      component: PlyrPlayer
     }
   ]
 })

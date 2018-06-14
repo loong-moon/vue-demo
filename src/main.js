@@ -7,6 +7,7 @@ import store from './store'
 import global from './config/global'
 import iView from 'iview'
 import 'iview/dist/styles/iview.css'
+import '@/assets/sass/_app.scss'
 
 Vue.use(iView)
 Vue.use(global)

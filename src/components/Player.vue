@@ -174,7 +174,13 @@
 
         this.player = videojs(this.$refs.video, {
           controls: true,
-          preload: 'auto'
+          preload: 'auto',
+          controlBar: {
+            children: ['playToggle', 'progressControl', 'currentTimeDisplay', 'timeDivider', 'durationDisplay', 'volumePanel', 'fullscreenToggle'],
+            volumePanel: {
+              inline: false
+            }
+          }
         })
         this.mediaSource = new videojs.MediaSource()
         console.log(this.mediaSource)

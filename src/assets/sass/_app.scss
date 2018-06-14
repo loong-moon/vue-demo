@@ -1,0 +1,11 @@
+@charset "UTF-8";
+/*重新设置外部引用的样式*/
+
+
+
+/*多页面共享重用的样式*/
+
+.video-js{
+  .vjs-button{font-size: 12px;}
+  .vjs-duration, .vjs-current-time, .vjs-time-divider{ display: block;}
+}

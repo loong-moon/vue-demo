@@ -7,6 +7,7 @@
       <router-link to="/player">视频播放</router-link>
       <router-link to="/dash">DASH播放</router-link>
       <router-link to="/hls">HlS播放</router-link>
+      <router-link to="/plyr">plyr播放</router-link>
     </div>
 
     <svg class="icon" style="color:red;" aria-hidden="true">
