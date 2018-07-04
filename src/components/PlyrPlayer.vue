@@ -18,25 +18,7 @@
     data () {
       return {
         tokens: null,
-        player: null,
-        mediaSource: null,
-        sourceBuffer: null,
-        videoList: [{
-          url: '/static/oceans/frag_ocean000.mp4',
-          seconds: 11
-        }, {
-          url: '/static/oceans/frag_ocean001.mp4',
-          seconds: 11
-        }, {
-          url: '/static/oceans/frag_ocean002.mp4',
-          seconds: 9
-        }, {
-          url: '/static/oceans/frag_ocean003.mp4',
-          seconds: 8
-        }, {
-          url: '/static/oceans/frag_ocean004.mp4',
-          seconds: 6
-        }]
+        player: null
       }
     },
     mounted () {
