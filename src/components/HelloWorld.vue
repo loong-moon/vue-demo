@@ -8,6 +8,7 @@
       <router-link to="/dash">DASH播放</router-link>
       <router-link to="/hls">HlS播放</router-link>
       <router-link to="/plyr">plyr播放</router-link>
+      <router-link to="/flv">flv播放</router-link>
     </div>
 
     <svg class="icon" style="color:red;" aria-hidden="true">

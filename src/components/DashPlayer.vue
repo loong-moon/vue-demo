@@ -23,38 +23,26 @@
       }
     },
     mounted () {
-      this.$nextTick()
-        .then(() => {
-          var myCustomCallback = function (player, mediaPlayer) {
-            // Log MediaPlayer messages through video.js
-            if (videojs && videojs.log) {
-              mediaPlayer.getDebug().setLogToBrowserConsole(false)
+      this.initPlayer()
+    },
+    methods: {
+      initPlayer () {
+        var myCustomCallback = function (player, mediaPlayer) {
+          // Log MediaPlayer messages through video.js
+          if (videojs && videojs.log) {
+            mediaPlayer.getDebug().setLogToBrowserConsole(false)
 //               mediaPlayer.on('log', function (event) {
 //                videojs.log(event.message)
 //               })
-            }
           }
-          videojs.Html5DashJS.hook('beforeinitialize', myCustomCallback)
+        }
+        videojs.Html5DashJS.hook('beforeinitialize', myCustomCallback)
 
-          videojs(this.$refs.video, {
-            controls: true,
-            autoplay: false,
-            preload: 'auto'
-          })
-
+        videojs(this.$refs.video, {
+          controls: true,
+          autoplay: false,
+          preload: 'auto'
         })
-    },
-    methods: {
-      getTokens () {
-        this.$http.get('/device/devices/tokens')
-          .then(response => {
-            let resData = response.data
-            // console.log(response);
-            this.tokens = resData
-          })
-          .catch(err => {
-            console.error(err)
-          })
       }
     }
   }

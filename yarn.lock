@@ -77,6 +77,18 @@
   dependencies:
     samsam "1.3.0"
 
+"@videojs/http-streaming@1.1.0":
+  version "1.1.0"
+  resolved "http://registry.npm.taobao.org/@videojs/http-streaming/download/@videojs/http-streaming-1.1.0.tgz#ae51919491090eacaab525da30bc0c1beede2515"
+  dependencies:
+    aes-decrypter "3.0.0"
+    global "^4.3.0"
+    m3u8-parser "4.2.0"
+    mpd-parser "0.6.1"
+    mux.js "4.4.1"
+    url-toolkit "^2.1.3"
+    video.js "^6.8.0 || ^7.0.0"
+
 JSONStream@^1.0.3:
   version "1.3.2"
   resolved "http://registry.npm.taobao.org/JSONStream/download/JSONStream-1.3.2.tgz#c102371b6ec3a7cf3b847ca00c20bb0fce4c6dea"
@@ -139,6 +151,14 @@ aes-decrypter@1.0.3:
   resolved "http://registry.npm.taobao.org/aes-decrypter/download/aes-decrypter-1.0.3.tgz#9c06b8a5435a5ad09db933f8a014afcf184cc34e"
   dependencies:
     pkcs7 "^0.2.3"
+
+aes-decrypter@3.0.0:
+  version "3.0.0"
+  resolved "http://registry.npm.taobao.org/aes-decrypter/download/aes-decrypter-3.0.0.tgz#7848a1c145b9fdbf57ae3e2b5b1bc7cf0644a8fb"
+  dependencies:
+    commander "^2.9.0"
+    global "^4.3.2"
+    pkcs7 "^1.0.2"
 
 after@0.8.2:
   version "0.8.2"
@@ -3479,7 +3499,7 @@ glob@^6.0.4:
     once "^1.3.0"
     path-is-absolute "^1.0.0"
 
-global@4.3.2, global@^4.3.0, global@^4.3.1, global@~4.3.0:
+global@4.3.2, global@^4.3.0, global@^4.3.1, global@^4.3.2, global@~4.3.0:
   version "4.3.2"
   resolved "http://registry.npm.taobao.org/global/download/global-4.3.2.tgz#e76989268a6c74c38908b1305b10fc0e394e9d0f"
   dependencies:
@@ -4966,6 +4986,10 @@ m3u8-parser@2.1.0:
   version "2.1.0"
   resolved "http://registry.npm.taobao.org/m3u8-parser/download/m3u8-parser-2.1.0.tgz#c8170329ec1cd515d0d58bb8b762da9896cb0368"
 
+m3u8-parser@4.2.0:
+  version "4.2.0"
+  resolved "http://registry.npm.taobao.org/m3u8-parser/download/m3u8-parser-4.2.0.tgz#c8e0785fd17f741f4408b49466889274a9e36447"
+
 macaddress@^0.2.8:
   version "0.2.8"
   resolved "http://registry.npm.taobao.org/macaddress/download/macaddress-0.2.8.tgz#5904dc537c39ec6dbefeae902327135fa8511f12"
@@ -5276,6 +5300,13 @@ move-concurrently@^1.0.1:
     rimraf "^2.5.4"
     run-queue "^1.0.3"
 
+mpd-parser@0.6.1:
+  version "0.6.1"
+  resolved "http://registry.npm.taobao.org/mpd-parser/download/mpd-parser-0.6.1.tgz#27e7aafe075817846ce55406ac03711df1ce0eb7"
+  dependencies:
+    global "^4.3.0"
+    url-toolkit "^2.1.1"
+
 ms@0.7.1:
   version "0.7.1"
   resolved "http://registry.npm.taobao.org/ms/download/ms-0.7.1.tgz#9cd13c03adbff25b65effde7ce864ee952017098"
@@ -5291,6 +5322,10 @@ mute-stream@0.0.7:
 mux.js@4.3.2:
   version "4.3.2"
   resolved "http://registry.npm.taobao.org/mux.js/download/mux.js-4.3.2.tgz#576d537df037dc5ec35ec1316b948d815d35c210"
+
+mux.js@4.4.1:
+  version "4.4.1"
+  resolved "http://registry.npm.taobao.org/mux.js/download/mux.js-4.4.1.tgz#c9c9a5e7e9f69f1d5670f2cc71c4cefa45aa7aec"
 
 nan@^2.3.0, nan@^2.3.2:
   version "2.9.2"
@@ -5971,6 +6006,10 @@ pinkie@^2.0.0:
 pkcs7@^0.2.3:
   version "0.2.3"
   resolved "http://registry.npm.taobao.org/pkcs7/download/pkcs7-0.2.3.tgz#22d60666d01065c5f24439098e4a4830452273be"
+
+pkcs7@^1.0.2:
+  version "1.0.2"
+  resolved "http://registry.npm.taobao.org/pkcs7/download/pkcs7-1.0.2.tgz#b6dba527528c2942bfc122ce2dafcdb5e59074e7"
 
 pkg-dir@^1.0.0:
   version "1.0.0"
@@ -7956,7 +7995,7 @@ url-polyfill@^1.0.13:
   version "1.0.13"
   resolved "http://registry.npm.taobao.org/url-polyfill/download/url-polyfill-1.0.13.tgz#5324c5e6e3d3bafdc93a73c21def21e8b697c910"
 
-url-toolkit@^2.1.3:
+url-toolkit@^2.1.1, url-toolkit@^2.1.3:
   version "2.1.4"
   resolved "http://registry.npm.taobao.org/url-toolkit/download/url-toolkit-2.1.4.tgz#e0dac60e5fdd50b8ac984307699e8b72439b3fd3"
 
@@ -8042,7 +8081,7 @@ verror@1.10.0:
     core-util-is "1.0.2"
     extsprintf "^1.2.0"
 
-"video.js@^5.17.0 || ^6.2.0", "video.js@^5.18.0 || ^6.2.8", "video.js@^5.19.1 || ^6.2.0", video.js@^6.7.1:
+"video.js@^5.17.0 || ^6.2.0", "video.js@^5.18.0 || ^6.2.8", "video.js@^5.19.1 || ^6.2.0":
   version "6.7.3"
   resolved "http://registry.npm.taobao.org/video.js/download/video.js-6.7.3.tgz#616ab015a74bb1bc8b092e9b4b8022519756f7c0"
   dependencies:
@@ -8053,6 +8092,19 @@ verror@1.10.0:
     videojs-font "2.1.0"
     videojs-ie8 "1.1.2"
     videojs-vtt.js "0.12.5"
+    xhr "2.4.0"
+
+"video.js@^6 || ^7", "video.js@^6.8.0 || ^7.0.0", video.js@^7.1.0:
+  version "7.1.0"
+  resolved "http://registry.npm.taobao.org/video.js/download/video.js-7.1.0.tgz#93de7ec3396d3edb3fab0ffd4e9d3237e7e068ec"
+  dependencies:
+    "@videojs/http-streaming" "1.1.0"
+    babel-runtime "^6.9.2"
+    global "4.3.2"
+    safe-json-parse "4.0.0"
+    tsml "1.0.1"
+    videojs-font "3.0.0"
+    videojs-vtt.js "0.14.1"
     xhr "2.4.0"
 
 videojs-contrib-dash@^2.9.2:
@@ -8085,9 +8137,21 @@ videojs-contrib-media-sources@4.7.0:
     video.js "^5.17.0 || ^6.2.0"
     webwackify "0.1.3"
 
+videojs-flash@^2.1.1:
+  version "2.1.1"
+  resolved "http://registry.npm.taobao.org/videojs-flash/download/videojs-flash-2.1.1.tgz#4fa99f4e09235193326c296b1f3b083a5aacd1c9"
+  dependencies:
+    global "^4.3.2"
+    video.js "^6 || ^7"
+    videojs-swf "5.4.1"
+
 videojs-font@2.1.0:
   version "2.1.0"
   resolved "http://registry.npm.taobao.org/videojs-font/download/videojs-font-2.1.0.tgz#a25930a67f6c9cfbf2bb88dacb8c6b451f093379"
+
+videojs-font@3.0.0:
+  version "3.0.0"
+  resolved "http://registry.npm.taobao.org/videojs-font/download/videojs-font-3.0.0.tgz#90eafddcf26b407448c833523f5ca4ad8d5cc1af"
 
 videojs-ie8@1.1.2:
   version "1.1.2"
@@ -8095,9 +8159,19 @@ videojs-ie8@1.1.2:
   dependencies:
     es5-shim "^4.5.1"
 
+videojs-swf@5.4.1:
+  version "5.4.1"
+  resolved "http://registry.npm.taobao.org/videojs-swf/download/videojs-swf-5.4.1.tgz#2077ef71c749f2c7823ef49babae4dd2acb08f87"
+
 videojs-vtt.js@0.12.5:
   version "0.12.5"
   resolved "http://registry.npm.taobao.org/videojs-vtt.js/download/videojs-vtt.js-0.12.5.tgz#32852732741c8b4e7a4314caa2cd93646a9c2d40"
+  dependencies:
+    global "^4.3.1"
+
+videojs-vtt.js@0.14.1:
+  version "0.14.1"
+  resolved "http://registry.npm.taobao.org/videojs-vtt.js/download/videojs-vtt.js-0.14.1.tgz#da583eb1fc9c81c826a9432b706040e8dea49911"
   dependencies:
     global "^4.3.1"
 

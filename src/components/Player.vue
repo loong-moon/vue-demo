@@ -224,18 +224,6 @@
           })
         // console.log(getBytes)
         return getBytes
-      },
-      getTokens () {
-
-        this.$http.get('/device/devices/tokens')
-          .then(response => {
-            let resData = response.data
-            // console.log(response);
-            this.tokens = resData
-          })
-          .catch(err => {
-            console.error(err)
-          })
       }
     },
     destroyed () {

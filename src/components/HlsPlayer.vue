@@ -25,38 +25,25 @@
       }
     },
     mounted () {
-      this.$nextTick()
-        .then(() => {
-
-          videojs(this.$refs.video, {
+      this.initPlayer()
+    },
+    methods: {
+      initPlayer () {
+        videojs(this.$refs.video, {
 //            html5: {
 //              hls: {
 //                withCredentials: true
 //              }
 //            },
-            sources: [{
+          sources: [{
 //              withCredentials: true,
-              type: 'application/x-mpegURL',
-              src: 'http://localhost:8090/oceans-hls/index.m3u8'
-            }],
-            controls: true,
-            autoplay: false,
-            preload: 'auto'
-          })
-
+            type: 'application/x-mpegURL',
+            src: 'http://localhost:8090/oceans-hls/index.m3u8'
+          }],
+          controls: true,
+          autoplay: false,
+          preload: 'auto'
         })
-    },
-    methods: {
-      getTokens () {
-        this.$http.get('/device/devices/tokens')
-          .then(response => {
-            let resData = response.data
-            // console.log(response);
-            this.tokens = resData
-          })
-          .catch(err => {
-            console.error(err)
-          })
       }
     }
   }
