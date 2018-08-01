@@ -18,7 +18,7 @@
   require('videojs-contrib-hls/dist/videojs-contrib-hls')
 
   export default {
-    name: 'DashPlayer',
+    name: 'HlsPlayer',
     data () {
       return {
         tokens: null

@@ -17,7 +17,7 @@
   import 'videojs-flash'
 
   export default {
-    name: 'DashPlayer',
+    name: 'FlvPlayer',
     data () {
       return {
         player: null

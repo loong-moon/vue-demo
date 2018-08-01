@@ -14,7 +14,7 @@
   import 'plyr/dist/plyr.css'
 
   export default {
-    name: 'Player',
+    name: 'PlyPlayer',
     data () {
       return {
         tokens: null,
