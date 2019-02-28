@@ -38,8 +38,10 @@
           sources: [{
 //              withCredentials: true,
             type: 'application/x-mpegURL',
-            src: 'http://localhost:8090/oceans-hls/index.m3u8'
+            src: 'http://ivi.bupt.edu.cn/hls/cctv1hd.m3u8'
+            // src: 'http://localhost:8090/oceans-hls/index.m3u8'
           }],
+          muted: true,
           controls: true,
           autoplay: false,
           preload: 'auto'

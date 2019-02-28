@@ -1,6 +1,6 @@
 <template>
   <div class="player">
-    <video id="my-video" ref="video" class="video-js" width="600" height="300">
+    <video id="my-video" ref="video" class="video-js" width="600" height="400">
       <!--<source src="/static/1.mp4" type='video/mp4'>-->
       <p class="vjs-no-js">
         观看视频请启用JavaScript，并且把浏览器升级到
@@ -175,6 +175,9 @@
         this.player = videojs(this.$refs.video, {
           controls: true,
           preload: 'auto',
+          muted: true,
+          // aspectRatio: '3:2',
+          // fluid: true,
           controlBar: {
             children: ['playToggle', 'progressControl', 'currentTimeDisplay', 'timeDivider', 'durationDisplay', 'volumePanel', 'fullscreenToggle'],
             volumePanel: {
@@ -232,5 +235,7 @@
 </script>
 
 <style lang="scss" scoped>
-
+  .video-js .vjs-tech {
+     object-fit: fill;
+  }
 </style>
