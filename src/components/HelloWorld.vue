@@ -19,52 +19,52 @@
 </template>
 
 <script>
-  import { mapState, mapMutations } from 'vuex'
-  export default {
+import { mapState, mapMutations } from 'vuex'
+export default {
     name: 'HelloWorld',
     data () {
-      return {
-        tokens: null
-      }
+        return {
+            tokens: null
+        }
     },
     computed: {
-      ...mapState([
-        'appName'
-      ])
+        ...mapState([
+            'appName'
+        ])
     },
     mounted () {
-      this.$nextTick()
-        .then(function () {
-          // DOM 更新了
-        })
-      // console.log(this, this.$http)
-//      this.getTokens()
-      this.testFunc('aaa')
+        this.$nextTick()
+            .then(function () {
+                // DOM 更新了
+            })
+        // console.log(this, this.$http)
+        //      this.getTokens()
+        this.testFunc('aaa')
     },
     methods: {
-      ...mapMutations([
-        'changeAppName'
-      ]),
-      sysFunc (v1, v2) {
+        ...mapMutations([
+            'changeAppName'
+        ]),
+        sysFunc (v1, v2) {
         // console.log(v1, v2)
-      },
-      testFunc (str) {
+        },
+        testFunc (str) {
         // console.log(str)
-        this.sysFunc(str)
-      },
-      getTokens () {
-        this.$http.get('/device/devices/tokens')
-          .then(response => {
-            let resData = response.data
-            // console.log(response);
-            this.tokens = resData
-          })
-          .catch(err => {
-            console.error(err)
-          })
-      }
+            this.sysFunc(str)
+        },
+        getTokens () {
+            this.$http.get('/device/devices/tokens')
+                .then(response => {
+                    let resData = response.data
+                    // console.log(response);
+                    this.tokens = resData
+                })
+                .catch(err => {
+                    console.error(err)
+                })
+        }
     }
-  }
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

@@ -9,7 +9,7 @@
       </div>
     </div>
     <div class="layout-header">
-      <div class="layout-logo"><img src="./assets/logo.png"></div>
+      <div class="layout-logo"><img src="./assets/logo.png" /></div>
     </div>
     <div style="min-height: 200px">
       <router-view/>
@@ -22,7 +22,7 @@
 
 <script>
 export default {
-  name: 'app'
+    name: 'app'
 }
 </script>
 

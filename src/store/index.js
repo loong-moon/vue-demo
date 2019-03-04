@@ -7,12 +7,12 @@ import getters from './getters'
 Vue.use(Vuex)
 
 const state = {
-  appName: '' // 当前位置纬度
+    appName: '' // 当前位置纬度
 }
 
 export default new Vuex.Store({
-  state,
-  mutations,
-  actions,
-  getters
+    state,
+    mutations,
+    actions,
+    getters
 })

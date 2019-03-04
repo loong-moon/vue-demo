@@ -12,39 +12,38 @@
 
 
 <script>
-  import videojs from 'video.js'
-  import 'video.js/dist/video-js.css'
-  import 'videojs-flash'
+import videojs from 'video.js'
+import 'video.js/dist/video-js.css'
+import 'videojs-flash'
 
-  export default {
+export default {
     name: 'FlvPlayer',
     data () {
-      return {
-        player: null
-      }
+        return {
+            player: null
+        }
     },
     mounted () {
-      this.initPlayer()
+        this.initPlayer()
     },
     methods: {
-      initPlayer () {
-        this.player = videojs(this.$refs.video, {
-          controls: true,
-          autoplay: false,
-          muted: true,
-          // aspectRatio: '5:2',
-          // fluid: true,
-          preload: 'auto',
-          techOrder: ['flash', 'html5']
-        })
+        initPlayer () {
+            this.player = videojs(this.$refs.video, {
+                controls: true,
+                autoplay: false,
+                muted: true,
+                // aspectRatio: '5:2',
+                // fluid: true,
+                preload: 'auto',
+                techOrder: ['flash', 'html5']
+            })
 
-        // this.player.on('timeupdate', function () {
-        //   console.log(this.currentTime())
-        // })
-
-      }
+            // this.player.on('timeupdate', function () {
+            //   console.log(this.currentTime())
+            // })
+        }
     }
-  }
+}
 </script>
 
 <style lang="scss">

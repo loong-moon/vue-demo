@@ -1,6 +1,6 @@
 
 export default {
-  count (state) {
-    return state.count += 100
-  }
+    count (state) {
+        return (state.count += 100)
+    }
 }

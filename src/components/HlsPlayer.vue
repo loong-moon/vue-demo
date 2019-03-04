@@ -12,43 +12,43 @@
 
 
 <script>
-  import videojs from 'video.js'
-  import 'video.js/dist/video-js.css'
-  window.videojs = videojs
-  require('videojs-contrib-hls/dist/videojs-contrib-hls')
+import videojs from 'video.js'
+import 'video.js/dist/video-js.css'
+window.videojs = videojs
+require('videojs-contrib-hls/dist/videojs-contrib-hls')
 
-  export default {
+export default {
     name: 'HlsPlayer',
     data () {
-      return {
-        tokens: null
-      }
+        return {
+            tokens: null
+        }
     },
     mounted () {
-      this.initPlayer()
+        this.initPlayer()
     },
     methods: {
-      initPlayer () {
-        videojs(this.$refs.video, {
-//            html5: {
-//              hls: {
-//                withCredentials: true
-//              }
-//            },
-          sources: [{
-//              withCredentials: true,
-            type: 'application/x-mpegURL',
-            src: 'http://ivi.bupt.edu.cn/hls/cctv1hd.m3u8'
-            // src: 'http://localhost:8090/oceans-hls/index.m3u8'
-          }],
-          muted: true,
-          controls: true,
-          autoplay: false,
-          preload: 'auto'
-        })
-      }
+        initPlayer () {
+            videojs(this.$refs.video, {
+                //            html5: {
+                //              hls: {
+                //                withCredentials: true
+                //              }
+                //            },
+                sources: [{
+                    //              withCredentials: true,
+                    type: 'application/x-mpegURL',
+                    src: 'http://ivi.bupt.edu.cn/hls/cctv1hd.m3u8'
+                    // src: 'http://localhost:8090/oceans-hls/index.m3u8'
+                }],
+                muted: true,
+                controls: true,
+                autoplay: false,
+                preload: 'auto'
+            })
+        }
     }
-  }
+}
 </script>
 
 <style lang="scss" scoped>
